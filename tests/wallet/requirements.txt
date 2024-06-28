@@ -46,7 +46,6 @@ pycryptodome==3.20.0
 pycvc==1.5.0
 pydantic==2.7.3
 pydantic-core==2.18.4
-pypicohsm==0.9
 pyscard==2.0.10
 pytest==8.2.2
 pyunormalize==15.1.0
