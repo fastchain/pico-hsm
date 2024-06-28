@@ -1,7 +1,10 @@
+```
 #build docker
+
 ./docker_build.sh
 
 #get shell in docker
+
 ./docker_start.sh
 
 
@@ -17,3 +20,4 @@ python3 tools/pico-hsm-tool.py --pin 648219 initialize --so-pin 57621880
 #enable disable button-push-control
 opensc-tool -s 806406000101
 opensc-tool -s 806406000100
+```
