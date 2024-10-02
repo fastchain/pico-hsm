@@ -1,5 +1,5 @@
 FROM debian:bullseye
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
 	build-essential \
 	git \
@@ -39,15 +39,14 @@ RUN cd /home/builduser \
 	&& git submodule update --init --recursive \
 	&& mkdir build_release
 
-ENV PICO_SDK_PATH /home/builduser/Devel/pico/pico-sdk
+ENV PICO_SDK_PATH=/home/builduser/Devel/pico/pico-sdk
 
 
 
 ARG USB_VID 0xfeff
 ARG USB_PID 0xfcfd
 
-ARG PICO_BOARD waveshare_rp2040_zero 
-
+ARG PICO_BOARD=pico
 RUN cd /home/builduser/pico-hsm \
 	&& cd build_release \
 	&& cmake .. -DPICO_BOARD=$PICO_BOARD -DUSB_VID=${USB_VID} -DUSB_PID=${USB_PID} \

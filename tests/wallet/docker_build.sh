@@ -7,7 +7,7 @@ else
     NUM_PROC="$(nproc)"
 fi
 
-docker image build \
+docker image build --no-cache \
         -t "pico-hsm-test:wallet" \
         --cache-from="pico-hsm-test:wallet" \
         --network host \
