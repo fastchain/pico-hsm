@@ -38,6 +38,7 @@
 
 #include "Infrared.h"
 
+int HSM_OLED_1in3_C_test(void);
 int OLED_1in3_C_test(void);
 int OLED_2in23_test(void); 
 
